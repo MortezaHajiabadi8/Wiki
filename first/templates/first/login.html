@@ -1,0 +1,15 @@
+{% extends 'first/base.html' %} {% load crispy_forms_tags %} {% block body_block %}
+<div class="row">
+    <div class="col-lg-4 col-md-6 col-sm-8 col-12">
+        <h2>ورود</h2>
+        <form method="post" novalidate>
+            {% csrf_token %}
+            <label for="username">Username:</label>
+            <input type="text" name="username" placeholder="Username">
+            <label for="password">Password:</label>
+            <input type="password" name="password" placeholder="Password">
+            <button type="submit" class="btn btn-primary">ورود</button>
+        </form>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,4 @@
+{% extends 'first/base.html' %} {% block body_block %}
+<p class="lead">یکی از انواع حساب های کاربری را انتخاب کنید</p>
+<a href="{% url 'first:student_signup' %}" class="btn btn-student btn-lg" role="button">دانشجو</a>
+<a href="{% url 'first:teacher_signup' %}" class="btn btn-teacher btn-lg" role="button">استاد</a> {% endblock %}
