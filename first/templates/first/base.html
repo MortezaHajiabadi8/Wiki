@@ -24,13 +24,7 @@
                         <h1 class="logo">
                             <a href="{% url 'first:home' %}">
                   ویکی کامپوزیت
-                  {% if user.is_authenticated %}
-                    {% if user.is_teacher %}
-                      <span class="icon-feather" data-toggle="tooltip" data-placement="right" title="Teacher profile"></span>
-                    {% else %}
-                      <span class="icon-graduation-cap" data-toggle="tooltip" data-placement="right" title="Student profile"></span>
-                    {% endif %}
-                  {% endif %}
+                  
                 </a>
                         </h1>
                     </div>
@@ -41,6 +35,7 @@
                         <a href="{% url 'first:upload_thesis' %}" class="btn btn-light" role="button">ثبت پایان نامه</a> {% endif %} {% else %}
                         <a href="{% url 'first:signin' %}" class="btn btn-light" role="button">ورود</a>
                         <a href="{% url 'first:signup' %}" class="btn btn-primary" role="button">ثبت نام</a> {% endif %}
+                        <a href="{% url 'admin:index' %}" class="btn btn-primary" role="button">ادمین</a>
                     </div>
                 </div>
                 <div class="card mb-3">
